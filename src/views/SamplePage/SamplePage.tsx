@@ -1,6 +1,8 @@
-import type { NextPage } from 'next'
+import clsx from 'clsx'
 import Head from 'next/head'
 import Image from 'next/image'
+import type { NextPage } from 'next'
+
 import styles from './SamplePage.module.scss'
 
 export const Home: NextPage = () => {
@@ -16,7 +18,13 @@ export const Home: NextPage = () => {
             </Head>
 
             <main className={styles.main}>
-                <h1 className={styles.title}>
+                <h1
+                    className={clsx(
+                        styles.title,
+                        'text-6xl',
+                        'text-green-600 p-2'
+                    )}
+                >
                     Welcome to <a href='https://nextjs.org'>Next.js!</a>
                 </h1>
 
