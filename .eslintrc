@@ -1,5 +1,5 @@
 {
-    "extends": ["airbnb-typescript", "airbnb/hooks"],
+    "extends": ["next/core-web-vitals", "airbnb-typescript", "airbnb/hooks"],
     "plugins": ["react", "@typescript-eslint"],
     "env": {
         "browser": true,

@@ -1,6 +1,6 @@
 # About
 
-This project is created using `react`, `typescript`, `vite` & `scss` with prepared configurations for **_dockerizing_** the project & **_client-side release scripts_** with **_automatic changelog generation_**. local hooks for **_type-checking_**, **_testing_** & **_linting_** are also included which can be further configured, improved & reused in ci/cd pipelines.
+This project is created using `next.js`, `typescript` & `scss` with prepared configurations for **_dockerizing_** the project & **_release scripts_** with **_automatic changelog generation_**. local hooks for **_type-checking_**, **_testing_** & **_linting_** are also included which can be further configured, improved & reused in ci/cd pipelines.
 
 ## Project Structure
 
@@ -48,7 +48,7 @@ npm run init:husky
 npm run dev
 
 # test the project:
-npm run test
+npm run cypress
 
 # build for production:
 npm run build
@@ -83,7 +83,7 @@ for more info, see: https://www.conventionalcommits.org/en/v1.0.0/
 
 ## Testing
 
-testing is done using `vitest`, `react-testing-library` and `cypress`. vitest's methods are expanded using `jest-dom` & is mainly used as a test-runner, while cypress is mainly here for visual & end-to-end testing.
+testing is done using `cypress`.
 
 ## Documenting
 

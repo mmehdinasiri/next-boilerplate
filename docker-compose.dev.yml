@@ -2,8 +2,8 @@ version: "0.0.1"
 
 services:
   app:
-    container_name: react-boilerplate-dev
-    image: react-boilerplate-dev
+    container_name: next-boilerplate-dev
+    image: next-boilerplate-dev
     build:
       context: .
       target: development

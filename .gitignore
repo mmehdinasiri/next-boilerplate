@@ -16,6 +16,7 @@ node_modules
 build
 dist
 dist-ssr
+.next
 
 # editor directories and files
 # .vscode/*
