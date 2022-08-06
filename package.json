@@ -1,29 +1,31 @@
 {
-    "name": "react-boilerplate",
+    "name": "next-boilerplate",
     "private": true,
     "version": "0.0.1",
-    "description": "Enterprise-ready React boilerplate with TypeScript, Vite and Scss",
+    "description": "Enterprise-ready Next.js boilerplate with TypeScript, Next.js, Tailwindcss and Scss",
     "author": "Sina Khodabandehloo <khodabandehloo.sina@gmail.com>",
-    "homepage": "https://github.com/Sinakhx/react-boilerplate#readme",
+    "homepage": "https://github.com/Sinakhx/next-boilerplate#readme",
     "bugs": {
-        "url": "https://github.com/Sinakhx/react-boilerplate/issues"
+        "url": "https://github.com/Sinakhx/next-boilerplate/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Sinakhx/react-boilerplate.git"
+        "url": "git+https://github.com/Sinakhx/next-boilerplate.git"
     },
     "license": "MIT",
     "keywords": [
-        "react",
+        "next",
         "boilerplate",
         "typescript",
-        "vite",
+        "react",
         "scss"
     ],
     "scripts": {
         "init:husky": "npx husky-init && husky install && husky set .husky/pre-commit 'npm run typecheck'",
         "dev": "next dev",
         "build": "tsc && next build",
+        "build-stats": "cross-env ANALYZE=true npm run build",
+        "export": "next export",
         "cypress": "cypress run",
         "cypress:open": "cypress open",
         "lint": "npm run lint:ts && npm run lint:styles",
@@ -47,6 +49,7 @@
         "release:patch": "npm run release -- --release-as patch && npm run push"
     },
     "dependencies": {
+        "@tanstack/react-query": "^4.0.10",
         "axios": "^0.27.2",
         "clsx": "^1.2.1",
         "next": "12.2.4",
@@ -57,19 +60,20 @@
         "@commitlint/cli": "^17.0.3",
         "@commitlint/config-conventional": "^17.0.3",
         "@cypress/react": "^6.0.0",
+        "@next/bundle-analyzer": "^12.2.4",
         "@types/node": "18.6.4",
         "@types/react": "18.0.15",
         "@types/react-dom": "18.0.6",
-        "eslint": "8.21.0",
-        "eslint-config-next": "12.2.4",
-        "typescript": "4.7.4",
         "@typescript-eslint/eslint-plugin": "^5.32.0",
         "@typescript-eslint/parser": "^5.32.0",
         "autoprefixer": "^10.4.8",
         "babel-loader": "^8.2.5",
+        "cross-env": "^7.0.3",
         "cypress": "^10.4.0",
+        "eslint": "8.21.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-typescript": "^17.0.0",
+        "eslint-config-next": "12.2.4",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jsx-a11y": "^6.6.1",
@@ -83,6 +87,7 @@
         "sass": "^1.54.3",
         "standard-version": "^9.5.0",
         "stylelint": "^14.9.1",
-        "stylelint-config-standard": "^26.0.0"
+        "stylelint-config-standard": "^26.0.0",
+        "typescript": "4.7.4"
     }
 }

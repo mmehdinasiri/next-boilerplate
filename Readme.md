@@ -6,7 +6,6 @@ This project is created using `next.js`, `typescript` & `scss` with prepared con
 
 The following schema is the main gist of the present project structure. Please follow the conventions in creating files & folders for keeping a unified, maintainable collaboration.
 
--   `index.html`: index file
 -   **`__mocks__`**: mocks for _node_modules_
 -   **`public`**: static files
 -   **`src`**: source codes
@@ -16,10 +15,11 @@ The following schema is the main gist of the present project structure. Please f
     -   **`config`**: custom & general project configurations
     -   **`routes`**: route files (slugs, paths, router, private routes, ...)
     -   **`components`**: common components used everywhere
-    -   **`pages`**: pages/views (each folder in this directory presents a single page route entity which maps to a unique route/url)
+    -   **`pages`**: pages (each folder in this directory presents a single page route entity which maps to a unique route/url)
+    -   **`views`**: views (page components)
         -   **`SamplePage`**: a sample page
             -   `SamplePage.tsx`: page component
-            -   `SamplePage.scss`: page styles
+            -   `SamplePage.module.scss`: page styles
             -   `SamplePageService.ts`: page services (api calls)
             -   `SamplePageViewModel.ts`: page view model (states, actions, logic)
             -   `SamplePageTypes.ts`: specific shared types for SamplePage & its components (optional)
@@ -28,11 +28,11 @@ The following schema is the main gist of the present project structure. Please f
                 -   **`ComponentA`**: sample inner component (specific to this page)
                     _(if the component gets complicated, it can also have it's own `service`, `viewModel` & other layers)_
                     -   `ComponentA.tsx`: component (atom)
-                    -   `ComponentA.scss`: component's styles
+                    -   `ComponentA.module.scss`: component's styles
                     -   `ComponentA.test.tsx`: component's tests
                 -   `index.ts`: barrel file for exporting ComponentA & other components in this directory
             -   **`tests`**: test suites for the SamplePage main component, service & viewModel files
-                -   **`unit`**: unit test suites for SamplePage (using vitest & react-testing-library)
+                -   **`unit`**: unit test suites for SamplePage
                     -   `SamplePageViewModel.unit.test.tsx`
                     -   ...
                 -   **`integration`**: integration test suites for SamplePage
@@ -53,8 +53,11 @@ npm run cypress
 # build for production:
 npm run build
 
-# locally preview production build:
-npm run preview
+# build for bundle analysis:
+npm run build-stats
+
+# export static build as index.html:
+npm run export
 ```
 
 ## Commit conventions

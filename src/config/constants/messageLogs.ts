@@ -5,7 +5,7 @@ export const MSG_200_SUCCESS = 'request was successful'
 export const MSG_400_BAD_REQUEST = 'bad request'
 export const MSG_401_UNAUTHORIZED =
     'you are not authorized to access this resource'
-export const MSG_403_FORBIDDEN = 'you are not forbidden to access this resource'
+export const MSG_403_FORBIDDEN = 'you are forbidden to access this resource'
 export const MSG_404_NOT_FOUND = 'resource not found'
 export const MSG_500_SERVER_ERROR =
     'server error, please try again later or contact the administrator'
