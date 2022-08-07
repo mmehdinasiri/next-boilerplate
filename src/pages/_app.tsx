@@ -4,6 +4,7 @@ import { IntlProvider } from 'react-intl'
 
 import '@/assets/styles/app.scss'
 import '@/assets/styles/main.scss'
+import { Layout } from '@/components/layout/Layout'
 import { queryClient } from '@/config/api/reactQueryConfig'
 import * as locales from '@/public/local'
 import { QueryClientProvider } from '@tanstack/react-query'
@@ -22,7 +23,9 @@ function App({ Component, pageProps }: AppProps) {
       messages={messages}
     >
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </QueryClientProvider>
     </IntlProvider>
   )
