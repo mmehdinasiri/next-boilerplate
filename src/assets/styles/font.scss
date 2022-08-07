@@ -1,0 +1,148 @@
+/**
+*
+*	Name:			DANA Fonts
+*	Version:			3.0
+*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
+*	Created on:		nov 12, 2021
+*	Updated on:		nov 12, 2021
+*	Website:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونت دانا یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+DANA fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+------------------------------------------------------------------------------------- fonts/-
+*	
+**/
+
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 10;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-Hairline.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-Hairline.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/DanaFaNum-Hairline.ttf') format('ttf');
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 100;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-Thin.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-Thin.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-Thin.ttf')
+      format('ttf');
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-UltraLight.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-UltraLight.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/woff/DanaFaNum-UltraLight.ttf')
+      format('tff');
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-Light.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-Light.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/woff/DanaFaNum-Light.tff')
+      format('tff');
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-Medium.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-Medium.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/woff/DanaFaNum-Medium.tff')
+      format('tff');
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-DemiBold.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-DemiBold.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/woff/DanaFaNum-DemiBold.woff')
+      format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-ExtraBold.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-ExtraBold.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/woff/DanaFaNum-ExtraBold.tff')
+      format('tff');
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-Black.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-Black.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/woff/DanaFaNum-Black.tff')
+      format('tff');
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-ExtraBold.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-ExtraBold.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/woff/DanaFaNum-ExtraBold.tff')
+      format('tff');
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff2/DanaFaNum-Regular.woff2')
+      format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('/fonts/DanaPro/Farsi_numerals/Webfonts/woff/DanaFaNum-Regular.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('/fonts/DanaPro/Farsi_numerals/woff/DanaFaNum-Regular.tff')
+      format('tff');
+}
