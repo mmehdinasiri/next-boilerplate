@@ -23,7 +23,7 @@ function App({ Component, pageProps }: AppProps) {
       messages={messages}
     >
       <QueryClientProvider client={queryClient}>
-        <Layout>
+        <Layout locale={locale}>
           <Component {...pageProps} />
         </Layout>
       </QueryClientProvider>
