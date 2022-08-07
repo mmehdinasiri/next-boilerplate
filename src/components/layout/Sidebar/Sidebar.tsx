@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import clsx from 'clsx'
 
-import slugs from '@/routes/slugs'
-
 import './Sidebar.scss'
 import addIcon from '@/assets/icons/add.svg'
 import { SideBarLink } from './SideBarLink'
 
+const slugs = { home: '/', notFound: '/404', lastPage: '/last-page' }
 export const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(true)
     const handleSwitch = () => setIsOpen((prev) => !prev)

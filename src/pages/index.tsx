@@ -1,11 +1,26 @@
+// export { Home as default } from '@/views/SamplePage/SamplePage'
 import clsx from 'clsx'
 import Head from 'next/head'
 import Image from 'next/image'
 import type { NextPage } from 'next'
 
-import styles from './SamplePage.module.scss'
+import styles from '@/views/SamplePage/SamplePage.module.scss'
+import { useIntl } from 'react-intl'
 
-export const Home: NextPage = () => {
+export function getServerSideProps(context: any) {
+    const { locale } = context
+    return {
+        props: { locale }
+    }
+}
+interface HopeProps {
+    locale: string
+}
+export const Home: NextPage<HopeProps> = ({ locale }) => {
+    const { formatMessage } = useIntl()
+    const f = (id: string, value?: string) => formatMessage({ id }, { value })
+
+    const dynamicValue = locale === 'en' ? 'value' : 'مقدار'
     return (
         <div className={styles.container}>
             <Head>
@@ -25,9 +40,12 @@ export const Home: NextPage = () => {
                         'text-green-600 p-2'
                     )}
                 >
-                    Welcome to <a href='https://nextjs.org'>Next.js!</a>
+                    {f('welcome')}{' '}
+                    <a href='https://nextjs.org'>{f('nextjs')}</a>
                 </h1>
-
+                <h2 className='text-3xl'>
+                    {formatMessage({ id: 'dynamic' }, { value: dynamicValue })}
+                </h2>
                 <p className={styles.description}>
                     Get started by editing{' '}
                     <code className={styles.code}>pages/index.tsx</code>
@@ -94,3 +112,5 @@ export const Home: NextPage = () => {
         </div>
     )
 }
+
+export default Home
