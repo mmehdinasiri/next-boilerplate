@@ -26,14 +26,12 @@ export const Home: NextPage<HopeProps> = ({ locale }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>
-        <h1 className={clsx('text-6xl', 'text-green-600 p-2')}>
-          {f('welcome')} <a href='https://nextjs.org'>{f('nextjs')}</a>
-        </h1>
-        <h2 className='text-3xl'>
-          {formatMessage({ id: 'dynamic' }, { value: dynamicValue })}
-        </h2>
-      </main>
+      <h1 className={clsx('text-6xl', 'text-green-600 p-2')}>
+        {f('welcome')} <a href='https://nextjs.org'>{f('nextjs')}</a>
+      </h1>
+      <h2 className='text-3xl'>
+        {formatMessage({ id: 'dynamic' }, { value: dynamicValue })}
+      </h2>
     </div>
   )
 }

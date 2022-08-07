@@ -9,8 +9,10 @@ interface LayoutProps {
 export const Layout: FC<LayoutProps> = ({ children, locale }) => {
   return (
     <div dir={locale === 'fa' ? 'rtl' : 'ltr'}>
-      <Header />
-      {children}
+      <div className='wrapper'>
+        <Header />
+        <main>{children}</main>
+      </div>
       <Footer />
     </div>
   )

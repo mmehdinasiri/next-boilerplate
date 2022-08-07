@@ -2,7 +2,6 @@ import type { AppProps } from 'next/app'
 import { NextRouter, useRouter } from 'next/router'
 import { IntlProvider } from 'react-intl'
 
-import '@/assets/styles/app.scss'
 import '@/assets/styles/main.scss'
 import { Layout } from '@/components/layout/Layout'
 import { queryClient } from '@/config/api/reactQueryConfig'
