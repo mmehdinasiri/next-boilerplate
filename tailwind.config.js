@@ -2,6 +2,7 @@ module.exports = {
   content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     colors: {
+      white: '#fff',
       'm-blue-darker': '#062a38',
       'm-blue-dark-middle': '#083647',
       'm-blue-dark': '#003b52',
@@ -19,7 +20,11 @@ module.exports = {
       'm-green-medium': '#eef8f7',
       'm-green-light': '#effbff'
     },
-    extend: {}
+    extend: {
+      boxShadow: {
+        'm-shadow': '0px 5px 16px rgb(0 0 0 / 7%)'
+      }
+    }
   },
   plugins: []
 }

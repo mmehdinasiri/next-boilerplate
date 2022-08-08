@@ -1,41 +1,11 @@
 import Image from 'next/image'
-import { useIntl } from 'react-intl'
+import { FC } from 'react'
 
-export const Header = () => {
-  const { formatMessage } = useIntl()
-  const f = (id: string, value?: string) => formatMessage({ id }, { value })
-  const headerLink = [
-    {
-      label: f('header.menu.item1'),
-      megaMenu: true,
-      link: ''
-    },
-    {
-      label: f('header.menu.item2'),
-      megaMenu: true,
-      link: ''
-    },
-    {
-      label: f('header.menu.item3'),
-      megaMenu: true,
-      link: ''
-    },
-    {
-      label: f('header.menu.item4'),
-      megaMenu: false,
-      link: '/about/'
-    },
-    {
-      label: f('header.menu.item5'),
-      megaMenu: false,
-      link: '/branches/'
-    },
-    {
-      label: f('header.menu.item6'),
-      megaMenu: false,
-      link: '/job/'
-    }
-  ]
+import { SubMenu } from './SubMenu'
+import { useHeaderData } from './useHeaderData'
+
+export const Header: FC = () => {
+  const { MainMenuItem } = useHeaderData()
   return (
     <header>
       <nav className='px-8 py-6 bg-gray-100 border-gray-200 '>
@@ -72,11 +42,15 @@ export const Header = () => {
           </button>
           <div className='hidden md:block' id='mobile-menu'>
             <ul className='flex flex-col md:flex-row'>
-              {headerLink.map((item, idx) => (
-                <li key={idx} className='py-1 ml-4'>
-                  <a href='#' className='text-sm leading-normal text-m-blue'>
+              {MainMenuItem.map((item, idx) => (
+                <li key={idx} className='relative py-1 ml-4 group '>
+                  <a
+                    href={item.link}
+                    className='text-sm leading-normal text-m-blue'
+                  >
                     {item.label}
                   </a>
+                  {item.subMenu && <SubMenu />}
                 </li>
               ))}
             </ul>
