@@ -18,7 +18,12 @@ module.exports = {
       'm-green-outline-active': '#b3e5e0',
       'm-green-top': '#d0f0f2',
       'm-green-medium': '#eef8f7',
-      'm-green-light': '#effbff'
+      'm-green-light': '#effbff',
+      'm-text-darker': '#2c2f33',
+      'm-text-dark': '#42474d',
+      'm-text-medium': '#585f66',
+      'm-text-light': '#6e7780',
+      'm-text-lighter': '#848e99'
     },
     extend: {
       boxShadow: {
@@ -26,5 +31,5 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-labeled-groups')(['1', '2', '3'])]
 }

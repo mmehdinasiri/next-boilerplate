@@ -15,5 +15,5 @@
     "vite.config.*": "tsconfig.*, .lighthouserc.*, babel.config.*, cypress.json, jest.config.*, .editorconfig, jsconfig.*, karma*, playwright.config.*, postcss.config.*, tailwind.config.*, tsdoc.*, unocss.config.*, apollo.config.*, ava.config.*, cypress.json, firebase.json, grunt*, gulp*, jest.config.*, jsconfig.*, playwright.config.*, rollup.config.*, vitest.config.*, webpack.config.*",
     ".d.ts": "typings.d.ts, env.d.ts, vite-env.d.ts, globals.d.ts, modules.d.ts, next-env.d.ts"
   },
-  "cSpell.words": ["clsx"]
+  "cSpell.words": ["clsx", "tailwindcss"]
 }
