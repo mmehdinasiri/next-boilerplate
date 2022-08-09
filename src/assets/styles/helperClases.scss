@@ -1,0 +1,10 @@
+//transitions
+.transitions-all-150ms {
+  @apply transition-all ease-in-out delay-150;
+}
+.transitions-colors-150ms {
+  @apply transition-colors ease-in-out delay-150;
+}
+.transitions-opacity-150ms {
+  @apply transition-opacity ease-in-out delay-150;
+}

@@ -1,11 +1,13 @@
-@import './font.scss'; // or @import './reset.scss'; (choose one based on your needs)
-
+@import './font.scss';
 // global styles go here
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import './normalize.scss'; // or @import './reset.scss'; (choose one based on your needs)
+@import './normalize.scss';
 @import './variables.scss';
+@layer utilities {
+  @import './helperClases.scss';
+}
 @import './app.scss';
 @import './override/toast.scss';

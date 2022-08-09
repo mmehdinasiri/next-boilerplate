@@ -43,14 +43,18 @@ export const Header: FC = () => {
           <div className='hidden md:block' id='mobile-menu'>
             <ul className='flex flex-col md:flex-row'>
               {MainMenuItem.map((item, idx) => (
-                <li key={idx} className='relative py-1 ml-4 group '>
+                <li
+                  key={idx}
+                  className='relative py-1 ml-4 group '
+                  id={`menu-${idx}`}
+                >
                   <a
                     href={item.link}
-                    className='text-sm leading-normal text-m-blue'
+                    className='text-sm font-medium leading-normal text-m-blue'
                   >
-                    {item.label}
+                    {item.title}
                   </a>
-                  {item.subMenu && <SubMenu />}
+                  {item.subMenu && <SubMenu items={item.subMenu} />}
                 </li>
               ))}
             </ul>

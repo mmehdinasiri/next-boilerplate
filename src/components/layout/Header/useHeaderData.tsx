@@ -1,42 +1,90 @@
 import { useIntl } from 'react-intl'
 
-interface MainMenu {
-  label: string
-  subMenu: boolean
+export interface TSubMenu {
+  title: string
   link: string
+  icon: string
+  desc: string
 }
-export const useHeaderData = (): { MainMenuItem: MainMenu[] } => {
+interface TMainMenu {
+  title: string
+  link: string
+  subMenu?: TSubMenu[]
+}
+export const useHeaderData = (): { MainMenuItem: TMainMenu[] } => {
   const { formatMessage } = useIntl()
   const f = (id: string, value?: string) => formatMessage({ id }, { value })
   const MainMenuItem = [
     {
-      label: f('header.menu.item1'),
-      subMenu: true,
-      link: 'investment'
+      title: f('header.menu.item1'),
+      link: 'investment',
+      subMenu: [
+        {
+          title: f('header.menu.item1.subMenu.item1'),
+          desc: f('header.menu.item1.subMenu.item1.subTitle'),
+          link: 'investment',
+          icon: 'icon-investment'
+        },
+        {
+          title: f('header.menu.item1.subMenu.item2'),
+          desc: f('header.menu.item1.subMenu.item2.subTitle'),
+          link: 'funds',
+          icon: 'icon-funds'
+        }
+      ]
     },
     {
-      label: f('header.menu.item2'),
-      subMenu: true,
-      link: 'trades'
+      title: f('header.menu.item2'),
+      link: 'trades',
+      subMenu: [
+        {
+          title: f('header.menu.item2.subMenu.item1'),
+          desc: f('header.menu.item2.subMenu.item1.subTitle'),
+          link: 'investment',
+          icon: 'icon-trades'
+        },
+        {
+          title: f('header.menu.item2.subMenu.item2'),
+          desc: f('header.menu.item2.subMenu.item2.subTitle'),
+          link: 'funds',
+          icon: 'icon-easytrader'
+        }
+      ]
     },
     {
-      label: f('header.menu.item3'),
-      subMenu: true,
-      link: ''
+      title: f('header.menu.item3'),
+      link: '',
+      subMenu: [
+        {
+          title: f('header.menu.item3.subMenu.item1'),
+          desc: f('header.menu.item3.subMenu.item1.subTitle'),
+          link: 'investment',
+          icon: 'icon-learning'
+        },
+        {
+          title: f('header.menu.item3.subMenu.item2'),
+          desc: f('header.menu.item3.subMenu.item2.subTitle'),
+          link: 'funds',
+          icon: 'icon-events'
+        },
+        {
+          title: f('header.menu.item3.subMenu.item3'),
+          desc: f('header.menu.item3.subMenu.item3.subTitle'),
+          link: 'funds',
+          icon: 'icon-course'
+        }
+      ]
     },
     {
-      label: f('header.menu.item4'),
-      subMenu: false,
+      title: f('header.menu.item4'),
       link: '/about/'
     },
     {
-      label: f('header.menu.item5'),
-      subMenu: false,
+      title: f('header.menu.item5'),
       link: '/branches/'
     },
     {
-      label: f('header.menu.item6'),
-      subMenu: false,
+      title: f('header.menu.item6'),
       link: '/job/'
     }
   ]
